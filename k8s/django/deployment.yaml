@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: django
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: django-container
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: django
-          image: joeydebreuk/autogit:001
+          image: joeydebreuk/autogit:002
           ports:
             - containerPort: 8000
           env:
