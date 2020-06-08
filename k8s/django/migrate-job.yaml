@@ -1,13 +1,13 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: migrate
+  name: migrate001
 spec:
   template:
     spec:
       containers:
         - name: django
-          image: joeydebreuk/autogit:001
+          image: joeydebreuk/autogit:latest
           command: ['python', 'manage.py', 'migrate']
           env:
             - name: POSTGRES_USER

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: django
-          image: joeydebreuk/autogit:002
+          image: joeydebreuk/autogit:latest
           ports:
             - containerPort: 8000
           env:

@@ -10,9 +10,14 @@
 `kubectl apply -f k8s/django`
 
 
+### Update new build to deplyoment 
+docker build -t joeydebreuk/autogit:latest .
+docker push joeydebreuk/autogit:latest
+kubectl rollout restart deployment/django
 
-docker build -t joeydebreuk/autogit:001 .
-docker push joeydebreuk/autogit:001
+
+### open service in browser
+minikube service django-service
 
 
 ### copypasta
